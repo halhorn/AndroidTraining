@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/sub_message"/>
+<fragment 
+    android:id="@+id/TestFragment"
+    android:name="jp.mixi.practice.activity.beg.TestFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+</LinearLayout>

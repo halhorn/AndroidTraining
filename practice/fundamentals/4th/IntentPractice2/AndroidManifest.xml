@@ -22,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <receiver
+            android:name="jp.mixi.practice.intent.med.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="jp.mixi.practice.intent.med.android.intent.action.FIRST"/>
+            </intent-filter>
+        </receiver>
+        </application>
 
 </manifest>

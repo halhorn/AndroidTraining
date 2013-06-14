@@ -17,7 +17,7 @@ import android.widget.TextView;
 @SuppressLint("UseSparseArrays")
 public class MainActivity extends Activity {
 
-    /** 結果表示用フォーマット */
+    /** 邨先棡陦ｨ遉ｺ逕ｨ繝輔か繝ｼ繝槭ャ繝�*/
     private static final NumberFormat DISPLAY_FORMAT = new DecimalFormat("0.########");
     private static final Map<Integer, Integer> mNumberMap;
     private static final Map<Integer, OPERATOR> mOperatorMap;
@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    // 各ボタンに対して押された時の動作をリンクさせる
+    // 蜷��繧ｿ繝ｳ縺ｫ蟇ｾ縺励※謚ｼ縺輔ｌ縺滓凾縺ｮ蜍穂ｽ懊ｒ繝ｪ繝ｳ繧ｯ縺輔○繧�    
     private void setupOnClickListener() {
         for (Integer key : mNumberMap.keySet()) {
             findViewById(key).setOnClickListener(new OnClickListener() {
@@ -93,7 +93,7 @@ public class MainActivity extends Activity {
         setCalcResult(calc.getNowValue());
     }
 
-    // 結果を画面表示
+    // 邨先棡繧堤判髱｢陦ｨ遉ｺ
     private void setCalcResult(double result) {
         TextView v = (TextView) findViewById(R.id.result);
         v.setText(DISPLAY_FORMAT.format(result));

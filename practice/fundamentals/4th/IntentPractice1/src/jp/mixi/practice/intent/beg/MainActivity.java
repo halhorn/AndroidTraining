@@ -2,6 +2,7 @@
 package jp.mixi.practice.intent.beg;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -10,6 +11,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final MainActivity self = this;
 
         View button1 = findViewById(R.id.CallActivity1);
         View button2 = findViewById(R.id.CallActivity2);
@@ -19,7 +21,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO ここに、NewActivity1 を呼び出す処理を書く
-                
+                Intent intent = new Intent(self, NewActivity1.class);
+                startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {

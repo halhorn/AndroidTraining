@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -62,6 +63,8 @@ public class MainActivity extends Activity {
                 publishProgress();
                 Thread.sleep(2000L);
                 publishProgress();
+                //TextView textView = (TextView)findViewById(R.id.textView);
+                //textView.setText("aaaaaaaa");
                 Thread.sleep(2000L);
                 publishProgress();
                 Thread.sleep(2000L);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StringResurceAssignment1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <plurals name="my_apple">
+        <item quantity="zero">I have no apples</item>
+        <item quantity="one">I have one apple</item>
+        <item quantity="other">I have %d apples</item>
+    </plurals>
+    <string name="text1">It is Japanese</string>
+    <string name="text2">2nd text</string>
+    <string name="text3">very very long 3rd text</string>
+    <string name="text4">magical 4th text</string>
+    <string name="text5">only 5th text</string>
+
+</resources>

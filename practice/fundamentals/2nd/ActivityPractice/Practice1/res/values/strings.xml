@@ -4,5 +4,7 @@
     <string name="app_name">ActivityPractice1</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="sub_message">This is sub activity!</string>
+    <string name="fragment_message">Hoge! Frag Hoge!</string>
 
 </resources>

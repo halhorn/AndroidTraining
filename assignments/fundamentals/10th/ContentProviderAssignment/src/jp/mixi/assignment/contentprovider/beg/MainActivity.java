@@ -2,8 +2,13 @@
 package jp.mixi.assignment.contentprovider.beg;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -12,8 +17,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO:独自ContentProviderを作成してください
-        // TODO:データベースにinsert、queryができるようにしてください
+        Uri uri = Uri.parse("content://" + "jp.mixi.assignment.contentprovider.beg.Drink" + "/Drink");
+        ContentValues cv = new ContentValues();
+        cv.put(Drink.COLUMN_NAME_DRINK_NAME, "のみもの");
+        cv.put(Drink.COLUMN_NAME_DRINK_PRICE, "100");
+        getContentResolver().insert(uri, cv);
+        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+        while (cursor.moveToNext()) {
+        	String res = cursor.getString(cursor.getColumnIndexOrThrow("title"));
+            Toast.makeText(this, res, Toast.LENGTH_SHORT).show();
+        }
+        cursor.close();
+       
 
     }
 

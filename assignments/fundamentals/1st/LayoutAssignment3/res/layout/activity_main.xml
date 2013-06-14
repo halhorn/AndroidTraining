@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#eeeeee">
     <!-- TODO: 左側から順に、下記の View を配置していき、そのまとまりを画面上部に揃える -->
     <!-- 1. プロフィール画像(ic_launcher)と、それを囲う四角形の枠、その下に プロフィール と書かれた文字 -->
     <!-- 2. 1. の右側の上半分に、ニックネームの表示と、そのさらに右端に設定アイコン -->
@@ -30,4 +31,257 @@
 
     <!-- TODO: 上記の View の上に、お知らせを表示する View を配置する -->
     <!-- Hint: 1. お知らせを表示する View の背景は android:background="@drawable/notify_button_state_list" にします -->
+    <RelativeLayout
+            android:id="@+id/upperLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileLayout">
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/ic_launcher"
+                    android:background="@drawable/frame"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="30dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="プロフィール"
+                    android:id="@+id/textView"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    />
+        </RelativeLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/profileLayout"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/profileLayout"
+                android:id="@+id/linearLayout">
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harumitsu Nobuta"
+                        android:id="@+id/textView2"
+                        android:layout_marginTop="25dp"
+                        android:textSize="20sp"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:layout_alignTop="@+id/textView2"
+                        android:layout_alignParentRight="true"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:layout_marginRight="5dp"/>
+            </RelativeLayout>
+
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000"
+                    android:layout_marginRight="5dp">
+            </FrameLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imageButton"
+                        android:src="@android:drawable/ic_menu_call"
+                        android:layout_weight="1"/>
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imageButton2"
+                        android:src="@android:drawable/ic_menu_send"
+                        android:layout_weight="1"/>
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imageButton3"
+                        android:src="@android:drawable/ic_menu_share"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/upperLayout"
+            android:layout_centerHorizontal="true"
+            android:background="#000000"
+            android:layout_marginTop="10dp">
+    </FrameLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomLine"
+            android:padding="12dp"
+            android:background="#ff9977">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3万件のお知らせがあります！"
+                android:id="@+id/textView6"
+                android:textSize="18sp"
+                android:textColor="#ffffff"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_above="@+id/bottomLayout"
+        ></FrameLayout>
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+                android:id="@+id/menuLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/ic_launcher"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="メニュー"
+                    android:id="@+id/textView3"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"/>
+
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/imageView3">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/badge"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="10"
+                        android:id="@+id/textView4"
+                        android:layout_gravity="center"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+        <FrameLayout
+                android:id="@+id/bottomLeftLine"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:layout_toRightOf="@+id/menuLayout"
+                android:layout_alignTop="@+id/menuLayout"
+                android:layout_alignBottom="@+id/menuLayout">
+
+        </FrameLayout>
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/bottomRightLine"
+                android:layout_toRightOf="@+id/bottomLeftLine"
+                android:layout_alignTop="@+id/menuLayout"
+                android:layout_alignBottom="@+id/menuLayout">
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/ic_launcher"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="つぶやきを投稿"
+                        android:id="@+id/textView5"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:layout_centerVertical="true"
+                        android:textSize="15sp"/>
+            </RelativeLayout>
+            </FrameLayout>
+        <FrameLayout
+                android:id="@+id/bottomRightLine"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:layout_toLeftOf="@+id/recentLayout"
+                android:layout_alignTop="@+id/menuLayout"
+                android:layout_alignBottom="@+id/menuLayout">
+
+        </FrameLayout>
+        <RelativeLayout
+                android:id="@+id/recentLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/ic_launcher"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最近"
+                    android:id="@+id/textView3"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
 </RelativeLayout>

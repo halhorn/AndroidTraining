@@ -10,10 +10,26 @@
     tools:context=".MainActivity">
 
     <!-- TODO: LongText をスクロールできるようにする -->
-    <!-- TODO: LongText の下に 1 つ Button を配置する -->
-    <TextView
-        android:id="@+id/LongText"
+    <ScrollView 
+        android:id="@+id/ScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"/>
+        android:layout_above="@+id/Button">
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+		    <TextView
+        		android:id="@+id/LongText"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:text="@string/hello_world"/>
+        </LinearLayout>
+    </ScrollView>
+    <!-- TODO: LongText の下に 1 つ Button を配置する -->
+    <Button 
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Button"/>
 </RelativeLayout>
